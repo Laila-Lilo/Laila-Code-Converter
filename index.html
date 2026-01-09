@@ -6,19 +6,20 @@
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #d8b4f7, #ffc1e3); /* Light purple → light pink */
+    background: linear-gradient(135deg, #d8b4f7, #ffc1e3);
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
+    justify-content: flex-start;
     min-height: 100vh;
+    padding: 40px 20px;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
   }
 
   .container {
@@ -44,61 +45,3 @@
     resize: none;
     height: 120px;
     background: rgba(255,255,255,0.1);
-    color: #fff;
-  }
-
-  input::placeholder, textarea::placeholder {
-    color: #e0e0e0;
-  }
-
-  button {
-    padding: 12px 25px;
-    background: #fff;
-    color: #d8b4f7;
-    font-weight: bold;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    margin-top: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-  }
-
-  button:hover {
-    transform: scale(1.05);
-    background: #f0f0f0;
-  }
-
-  footer {
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: rgba(255,255,255,0.7);
-    text-align: center;
-  }
-</style>
-</head>
-<body>
-
-<h1>🔐 Laila-Code Converter</h1>
-
-<div class="container">
-  <input type="text" id="normalText" placeholder="Type normal text here...">
-  <textarea id="secretText" placeholder="Laila-Code appears here..." readonly></textarea>
-  <button id="copyBtn">Copy to Clipboard</button>
-</div>
-
-<footer>Secret language for Laila 💖</footer>
-
-<script>
-const codeMap = {
-  A:'M',B:'N',C:'B',D:'V',E:'C',F:'X',G:'Z',H:'L',I:'K',J:'J',K:'H',L:'G',M:'F',N:'D',O:'S',P:'A',Q:'Q',R:'W',S:'E',T:'R',U:'T',V:'Y',W:'U',X:'I',Y:'O',Z:'P'
-};
-
-const normalInput = document.getElementById('normalText');
-const secretOutput = document.getElementById('secretText');
-const copyBtn = document.getElementById('copyBtn');
-
-normalInput.addEventListener('input', () => {
-  let text = normalInput.value.toUpperCase();
-  let converted = '';
-  for(let char
